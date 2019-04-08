@@ -1,8 +1,16 @@
 # vuejs-firestore-example
-
+Hi, I made this quick project to better understand how firestore and vuejs can work together.<br>
+Free feel to contact me on <b>github</b> if you have any question! <br>
+<b>Boris Tronquoy</b>
 ## Project setup
 ```
-npm install
+git clone ...
+cd vuejs-firebase-example
+```
+Don't forget:
+```
+> edit 'fb.example.js' with your data
+> rename it to 'fb.js'
 ```
 
 ### Compiles and hot-reloads for development
@@ -25,5 +33,5 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Live example:
+See [live exemple](https://vuejs-firestore-example.firebaseapp.com/).

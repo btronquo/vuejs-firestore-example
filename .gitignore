@@ -19,3 +19,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# Config Files
+fb.js
+.firebase
+.firebaserc
+firebase.json
