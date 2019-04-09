@@ -1,7 +1,6 @@
 <template>
   <div id="userform">
     <h1>Component UserAdd</h1>
-    <v-layout row wrap>
     <v-card class="elevation-12">
       <v-toolbar dark color="primary">
         <v-toolbar-title>Add a person</v-toolbar-title>
@@ -43,7 +42,6 @@
         >+ Add</v-btn>
         </v-card-actions>
       </v-card>
-    </v-layout>
   </div>
 </template>
 
@@ -56,6 +54,7 @@ export default {
     firstname: '',
     lastname: '',
     jobtitle: '',
+    createdAt: '',
     addLoading: false,
     nameRules: [
       v => !!v || 'This field is required'
@@ -71,7 +70,8 @@ export default {
         const user = {
           firstname: this.firstname,
           lastname: this.lastname,
-          jobtitle: this.jobtitle
+          jobtitle: this.jobtitle,
+          createdAt: Date.now()
         }
         db.collection('users').add(user).then(() => {
           this.addLoading = false;
