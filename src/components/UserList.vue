@@ -143,16 +143,16 @@ export default {
     }
   },
   computed:{
-    sortedUsers () {
-      return this.users.slice().sort(function(a, b) {
+    // sortedUsers () {
+      // return this.users.slice().sort(function(a, b) {
       //  var nameA=a.firstname.toLowerCase(), nameB=b.firstname.toLowerCase();
       //   if (nameA < nameB)
       //     return -1;
       //   if (nameA > nameB)
       //     return 1;
       //   return 0;
-      });
-    }
+    //   });
+    // }
   },
   created() {
     db.collection('users').onSnapshot(res =>{
@@ -174,7 +174,6 @@ export default {
           const objEdited = change.doc.data()
           objEdited.id = change.doc.id
 
-          console.log('data est:', objEdited)
           const index = this.users.indexOf(editedUser);
           this.users.splice(index, 1, objEdited)
         }
